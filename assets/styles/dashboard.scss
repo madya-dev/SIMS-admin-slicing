@@ -1,0 +1,121 @@
+@import "./component/logo";
+@import "./component/button";
+body {
+  background-color: #f9fafb;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  .sidebar {
+    max-width: 100px;
+    min-height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    &.show {
+      display: flex;
+      min-width: 250px;
+      .sidebar-brand {
+        .logo {
+          span {
+            display: block;
+          }
+        }
+      }
+      .nav-item {
+        .nav-link {
+          justify-content: start;
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .sidebar-brand {
+      width: 100%;
+      display: flex;
+      position: relative;
+      padding: 16px 0;
+      .logo {
+        width: 100%;
+        top: 16px;
+        justify-content: center;
+        span {
+          display: none;
+        }
+      }
+    }
+    .sidebar-divider {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .nav-item {
+      .nav-link {
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 16px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-weight: 300;
+        span {
+          display: none;
+        }
+        i {
+          font-size: 21px;
+        }
+      }
+      &.active {
+        .nav-link {
+          color: white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .content-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    .navbar {
+      width: 100%;
+      background-color: white;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      .avatar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #171717;
+        margin-right: 12px;
+        img {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+        }
+        &:hover {
+          color: #171717;
+        }
+      }
+    }
+    .content {
+      width: 100%;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .wrapper {
+    .sidebar {
+      display: none;
+    }
+  }
+}

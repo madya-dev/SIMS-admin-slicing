@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="/assets/images/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- my style -->
+    <link
+      rel="stylesheet"
+      href="/assets/styles/dashboard.css"
+      type="text/css"
+    />
+    <title>SIMS</title>
+  </head>
+  <body>
+    <section class="wrapper h-100 w-100">
+      <!-- sidebar -->
+      <ul class="sidebar navbar-nav bg-gradient bg-success h-100" id="sidebar">
+        <div class="container-fluid">
+          <!-- sidebar brand -->
+          <div class="sidebar-brand">
+            <a class="logo align-items-center d-flex gap-2 mb-3 w-100" href="/">
+              <img
+                src="/assets/images/logo/sims.svg"
+                alt=""
+                width="45"
+                height="45"
+                class="d-inline-block align-text-top"
+              />
+              <span>SIMS</span>
+            </a>
+          </div>
+          <!-- end sidebar brand -->
+          <!-- divider -->
+          <div class="sidebar-divider my-0"></div>
+          <!-- end divider -->
+          <!-- dashboard menu -->
+          <div class="nav-item">
+            <a class="nav-link" href="/"
+              ><i class="icon ion-md-analytics"></i><span>Dashboard</span></a
+            >
+          </div>
+          <!-- end dashboard menu -->
+          <!-- divider -->
+          <div class="sidebar-divider my-2"></div>
+          <!-- end divider -->
+          <!-- form menu -->
+          <div class="nav-item active">
+            <a class="nav-link" href="form.html"
+              ><i class="icon ion-md-document"></i><span>Forms</span></a
+            >
+          </div>
+          <!-- end form menu -->
+          <!-- table menu -->
+          <div class="nav-item">
+            <a class="nav-link" href="table.html"
+              ><i class="icon ion-md-grid"></i><span>Tables</span></a
+            >
+          </div>
+          <!-- end table menu -->
+        </div>
+      </ul>
+      <!-- end sidebar -->
+      <!-- content -->
+      <div class="content-wrapper h-100">
+        <nav class="navbar" id="top-bar">
+          <div class="container-fluid">
+            <button class="btn" id="btn-sidebar">
+              <i class="icon ion-md-menu"></i>
+            </button>
+            <div class="auth">
+              <a href="#" class="avatar">
+                <img src="/assets/images/man-2.jpg" alt="" />
+                <span class="name d-none d-lg-block">Madya Santosa</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="content">
+          <div class="container-fluid">
+            <div class="row pt-3">
+              <div class="col-lg-4 col-md-8 mx-auto">
+                <div class="card h-100 p-3">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group mb-3">
+                        <label for="firstName" class="mb-2">Nama Depan</label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          class="form-control"
+                          placeholder="Masukan nama depan"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group mb-3">
+                        <label for="lastName" class="mb-2">Nama Belakang</label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          class="form-control"
+                          placeholder="Masukan nama belakang"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="address" class="mb-2">Alamat</label>
+                    <input
+                      type="text"
+                      id="address"
+                      class="form-control"
+                      placeholder="Masukan alamat"
+                    />
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="status" class="mb-2">Status</label>
+                    <select name="status" id="status" class="form-select">
+                      <option value="">-- pilih status --</option>
+                      <option value="">Yaha Jomblo</option>
+                      <option value="">Punya Dong</option>
+                    </select>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="cerita" class="mb-2">Cerita</label>
+                    <textarea
+                      class="form-control"
+                      name="cerita"
+                      id="cerita"
+                      cols="30"
+                      rows="5"
+                      placeholder="ceritakan pengalamanmu"
+                    ></textarea>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="kelamin" class="mb-2">Jenis Kelamin</label>
+                    <div class="pilihan d-flex gap-3">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="kelamin"
+                          id="laki-laki"
+                        />
+                        <label class="form-check-label" for="laki-laki">
+                          laki-laki
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="kelamin"
+                          id="perempuan"
+                        />
+                        <label class="form-check-label" for="perempuan">
+                          perempuan
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="kelamin"
+                          id="ganda-campuran"
+                        />
+                        <label class="form-check-label" for="ganda-campuran">
+                          ganda campuran
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end content -->
+    </section>
+    <!-- scripts -->
+    <script src="/vendor/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="/assets/scripts/dashboard.js"></script>
+  </body>
+</html>
